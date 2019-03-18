@@ -15,6 +15,16 @@ $(function(){
 });
 
 $(function() {
+    let hideThis = $("<br /> <br /><div id='hideMe'></div>").html("Now I'm here!");
+    $(".todo-wrapper").after(hideThis); 
+});
+
+$(function() {
+    let hideButton = $("<br /> <p id='hideMe-click'></p>").html("Click!");
+    $("#hideMe").after(hideButton); 
+});
+
+$(function() {
     let footer = $("<footer></footer>").html("This is footer.");
     $(".content-wrapper").after(footer);
 });
