@@ -124,6 +124,24 @@ span {
     cursor: pointer;
 }
 
+#slideIt {
+    background-color: #575757;
+    padding: 1px;
+}
+
+#slideIt p {
+    color: #eefafd;
+}
+
+#text-area {
+    background-color: #575757;
+    padding: 1px 40px 15px 40px;
+}
+
+#text-area p {
+    color: #eefafd;
+}
+
 #hideMe {
     background-color: white;
     padding: 20px;
@@ -156,7 +174,7 @@ span {
 }
 
 #delete-button:hover {
-    box-shadow: 0px 2px 2px #575757;
+    box-shadow: 0px 0px 3px #575757;
 }
 
 footer {

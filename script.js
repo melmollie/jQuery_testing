@@ -15,13 +15,35 @@ $(function(){
 });
 
 $(function() {
+    let slideIt = $("<br /> <br /><div id='slideIt'></div>").html("<p>Expand Content</p>");
+    $(".todo-wrapper").after(slideIt);
+});
+
+$(function() {
+    let expandableContent = $("<div id='text-area'></div>").html("<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis imperdiet tellus non laoreet. Suspendisse sit amet diam sit amet libero pretium tristique. Morbi tristique cursus mi, ac venenatis est mattis in. Integer quis elementum libero. Aliquam eleifend lacinia orci bibendum finibus. Nullam eget tristique nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam non diam faucibus neque vulputate auctor fermentum eu ipsum. Maecenas sit amet nisl ut risus laoreet aliquet a id quam. Nullam eget sem vitae urna dapibus iaculis. Proin vel venenatis leo, sed hendrerit mauris.</p>");
+    $("#slideIt").after(expandableContent);
+});
+
+$(function() {
+    $("#slideIt").click(function() {
+        $("#text-area").slideToggle(500);
+    });
+});
+
+$(function() {
     let hideThis = $("<br /> <br /><div id='hideMe'></div>").html("Now I'm here!");
-    $(".todo-wrapper").after(hideThis); 
+    $("#text-area").after(hideThis); 
 });
 
 $(function() {
     let hideButton = $("<br /> <p id='hideMe-click'></p>").html("Click!");
     $("#hideMe").after(hideButton); 
+});
+
+$(function(){
+    $("#hideMe-click").click(function() {
+        $("#hideMe").fadeToggle(1000);
+    });
 });
 
 $(function() {
